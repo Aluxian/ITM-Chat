@@ -1,0 +1,30 @@
+.window-friends
+  nav.top-bar(data-topbar)
+    ul.title-area
+      li.name
+        h1
+          a(href="#") {{user.username}}
+      li.toggle-topbar.menu-icon
+        a(href="#")
+
+    section.top-bar-section
+      ul.right
+        li
+          a(href="#") Right Button Active
+
+  .row.friends-list
+    .medium-12.columns
+      a.friend-item(ng-repeat="friend in friends" ng-click="startChat(friend)")
+        .panel
+          h5 {{friend.username}}
+          p {{friend.password}}
+
+  .row
+    .medium-12.columns
+      .row.collapse
+        .small-9.columns
+          input(type="text" placeholder="Add friend by username..." ng-model="friendUsername")
+        .small-3.columns
+          button.button.itm.postfix(ng-click="addFriend()") Add
+
+  button.button.expand.itm.qf_no_mb(ng-click="signout()") Sign Out

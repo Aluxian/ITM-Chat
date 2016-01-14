@@ -1,0 +1,20 @@
+.chat-window
+  .conversation#conv_list
+    .row.conv-line(ng-repeat="message in messages")
+      .small-10.columns(ng-hide="message.alignRight")
+        .message
+          span {{message.message}}
+      .small-2.columns.text-center
+        img.avatar(src="https://s3.amazonaws.com/uifaces/faces/twitter/tomaslau/128.jpg")
+        span {{message.author}}
+      .small-10.columns(ng-show="message.alignRight")
+        .message
+          span {{message.message}}
+
+  .input-zone
+    form.row
+      .small-offset-1.small-8.columns
+        textarea(placeholder="Write something..." ng-model="message" required)
+      .small-2.columns
+        button.button.expand.itm(type="submit" ng-click="sendMessage()") Send
+      .small-1.columns

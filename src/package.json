@@ -1,0 +1,26 @@
+{
+  "name": "ITMchat",
+  "description": "IT Marathon Chat",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "toolbar": true,
+    "width": 250,
+    "height": 242,
+    "icon":"images/favicon.ico"
+  },
+  "dependencies": {
+    "jade": "~0.35.0",
+    "passport": "~0.1.17",
+    "passport-twitter": "~1.0.2",
+    "request": "~2.27.0",
+    "querystring": "~0.2.0",
+    "moment": "~2.4.0",
+    "shortid": "~2.0.0",
+    "tungus": "0.0.2",
+    "mongoose": "~3.8.7"
+  },
+  "scripts":{
+    "postinstall" : "node ../etc/scripts/postinstall.js"
+  }
+}

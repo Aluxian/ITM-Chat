@@ -1,0 +1,21 @@
+.sign-up-form
+  .row
+    .medium-12.columns
+      form
+        //span.label.label-danger(ng-show="error") {{error}}
+        label
+          | Username *
+          input(type='text' ng-model="user.username" placeholder='Username' required)
+        label
+          | Password *
+          input(type='password' ng-model="user.password" placeholder='Password' required)
+        label
+          | Email
+          input(type='email' ng-model="user.email" placeholder='Email')
+        label
+          | First Name
+          input(type='text' ng-model="user.first_name" placeholder='First Name')
+        label
+          | Last Name
+          input(type='text' ng-model="user.last_name" placeholder='Last Name')
+        button.button.expand.itm.qf_fix_mb(type="submit" ng-click="signup()") Sign Up

@@ -1,0 +1,12 @@
+.sign-in-form
+  .row
+    .medium-12.columns
+      form
+        //span.label.label-danger(ng-show="error") {{error}}
+        label
+          | Username
+          input(type='text' ng-model="user.username" placeholder='Username' required)
+        label
+          | Password
+          input(type='password' ng-model="user.password" placeholder='Password' required)
+        button.button.itm.qf_fix_mb.expand(type="submit" ng-click="signin()") Sign In
